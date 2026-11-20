@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Stealth Mode",
+    "description": "The window stays fully usable; only the external traces are hidden: taskbar button, Alt-Tab and the tray badge. Switch lives in Settings → Stealth Mode."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "dsh-stealth",
+  "version": "1.0.0",
+  "description": "Boss-key for the DeepSeek Harness desktop shell: keep the window fully usable while the taskbar button, Alt-Tab entry and tray badge disappear. One switch in Settings.",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "stealth",
+    "boss-key",
+    "taskbar"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huangnaonao112/dsh-stealth.git"
+  },
+  "homepage": "https://github.com/huangnaonao112/dsh-stealth#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "scripts/stealth.ps1",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
